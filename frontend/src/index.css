@@ -1,0 +1,82 @@
+@import "tailwindcss";
+
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+
+* {
+    box-sizing: border-box;
+}
+
+@layer base {
+    .update-button {
+        @apply bg-gray-800 text-gray-200 font-bold py-1.5 px-3 rounded hover:bg-gray-600 transition duration-300;
+    }
+
+    .delete-button {
+        @apply bg-red-800 text-gray-200 font-bold py-1 px-3 rounded hover:bg-red-600 transition duration-300;
+    }
+
+    .primary-button {
+        @apply text-gray-600 bg-gray-100 font-bold py-0.5 px-2 italic border-0 rounded underline hover:no-underline hover:text-gray-800 hover:bg-gray-200;
+    }
+
+    .emp-img-responsive{
+        @apply w-[50%] max-[500px]:w-8/10 max-[700px]:w-6/10 max-sm:ms-4 max-sm:my-4 h-[280px] max-lg:h-[240px] overflow-hidden;
+    }
+}
+
+input:active {
+    border-color: white !important;
+}
+
+th,
+td {
+    padding: 2px 6px;
+    text-align: left;
+    width: 50px;
+    min-width: fit-content;
+    max-width: 200px;
+}
+
+tr:last-child {
+    min-width: 140px;
+    max-width: 160px;
+    /* overflow-x: auto; */
+}
+
+table {
+    border: 2px solid gray;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border: 1px solid lightgray;
+}
+
+.employee-list li {
+    margin: 15px;
+}
+
+
+@media only screen and (max-width: 667px) {
+    body {
+        font-size: 14px;
+    }
+
+    h1 {
+        width: 100%;
+    }
+
+    .employee-list li {
+        margin: 5px 0px;
+    }
+}
+
+@media only screen and (max-width: 1080px) {
+
+    .employee-list li {
+        margin: 10px 0px;
+    }
+}
